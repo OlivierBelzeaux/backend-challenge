@@ -1,35 +1,53 @@
 # Siit Backend Challenge
 
-## Guidelines
+## Level 1
 
-**For each level, write code that creates a new `data/output.json` file from the data in `data/input.json`.
-An `expected_output.json` file is available to give you a reference on what result is expected.**
+Étape 1 : établir la liste des voitures et des locations
 
-- Clone this repo (do **not** fork it)
-- Solve the levels in ascending order
-- Only do one commit per level and include the `.git` when submiting your test
+Étape 2 : création de la liste des location à exporter dans le fichier output
 
-## Pointers
+Étape 3 : itération sur les locations
 
-You can have a look at the higher levels, but please do the simplest thing that could work for the level you're currently solving.
+Étape 4 : stockages des données nécessaire à la location d'une voiture
 
-The levels become more complex over time, so you will probably have to re-use some code and adapt it to the new requirements.
-A good way to solve this is by using OOP, adding new layers of abstraction when they become necessary and possibly write tests so you don't break what you have already done.
+Étape 5 : calculer le coût de la location
 
-Don't hesitate to write [shameless code](http://red-badger.com/blog/2014/08/20/i-spent-3-days-with-sandi-metz-heres-what-i-learned/) at first, and then refactor it in the next levels.
+Étape 6 : ajout des informations dans la liste (cf. etape 2)
 
-For higher levels we are interested in seeing code that is clean, extensible and robust, so don't overlook edge cases, use exceptions where needed, ...
+Étape 7 : création du fichier output contenant la liste des locations
 
-Please also note that:
+## Level 2
 
-- All prices are stored as integers (in cents)
-- Running `$ ruby main.rb` from the level folder must generate the desired output, but of course feel free to add more files if needed.
+Étape 1 : création d'une méthode permettant de calculer un prix dégréssif
 
-## Sending Your Results
+Étape 2 : ajout de la méthode de calcul dans la fonction permettant la création du fichier des locations
 
-Once you are done, please send use your results.
+## Level 3
 
-You can send your Github project link or zip your directory and send it via email.
-If you do not use Github, don't forget to attach your `.git` folder.
+Étape 1 : stockage des nouvelles données nécessaire au calcul
 
-Good luck!
+Étape 2 : création des méthodes permettant de calculer le montant des comissions
+
+*PS : au vu du fichier attendu je suis parti du postulat que le montant de l'assistance était de 100e et non pas 1e/j comme écrit dans l'énnoncer*
+
+## Level 4
+
+Étape 1 : ajout des nouvelles informations dans la méthode de création du fichier de location
+
+## Level 5
+
+Étape 1 : établir la liste des options
+
+Étape 2 : itération sur la liste d'option afin de créer un tableau comprenant toutes les options d'une location
+
+Étape 3 : ajout de la liste d'option dans la méthode de création du fichier final
+
+## Axe d'amélioration
+
+Avec plus de temps j'aurai :
+
+1- amélioré la fonction permettant le calcul du prix dégréssif qui n'est pas très robuste et qui est compliqué à maintenir en cas d'ajout de nouvelles règles.
+
+2- Défini le taux de commission dans une variable afin de pouvoir mettre a jour tous les calculs d'un coup en cas de changement de taux
+
+3- allégé la méthode all_rentals.each en ajoutant de nouvelles méthode (par exemple set_car) permettant de réduire le nombre de variables présente
